@@ -14,3 +14,4 @@ class MenuCommand(Command):
         print("Available commands:")
         for command_name in self.command_handler.commands.keys():
             print("-", command_name)
+        

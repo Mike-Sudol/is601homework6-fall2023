@@ -1,6 +1,5 @@
-""" ExitCommand Test """
+""" ExitCommand Test """ 
 import pytest
-from unittest.mock import patch
 from app.plugins.exit import ExitCommand
 
 def test_execute_exit():
@@ -9,3 +8,4 @@ def test_execute_exit():
     with pytest.raises(SystemExit) as e:
         exit_command.execute([])
     assert str(e.value) == "Exiting..."
+    

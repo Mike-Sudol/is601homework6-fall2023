@@ -2,12 +2,11 @@
 from app.commands import Command
 
 class TalkCommand(Command):
-    
+    """Talk Class"""
     def __init__(self):
-        """Initialize MenuCommand."""
-        super().__init__() 
+        """Initialize MenuCommand.""" 
 
     def execute(self, args):
-        """ Execute Talk """ 
+        """ Execute Talk """
         print("Hello World!")
         print(args)

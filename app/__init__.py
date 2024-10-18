@@ -32,7 +32,7 @@ class App:
     def start(self):
         """ Start Application """
         self.load_plugins()
-        print("Type 'menu' to see availqable commands, type 'exit' to quit")
+        print("Type 'menu' to see available commands, type 'exit' to quit")
         self.command_handler.register_command("menu", MenuCommand(self.command_handler))
         while True:
             try:

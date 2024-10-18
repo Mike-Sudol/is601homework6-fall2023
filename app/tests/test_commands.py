@@ -1,12 +1,12 @@
 """Tests Command and CommandHandler """
 
-from unittest.mock import MagicMock, patch
+from unittest.mock import patch
 import pytest
 from app.commands import Command, CommandHandler
 
-class TestCommand(Command): 
+class TestCommand(Command):
     """ Test Dummy Command """
-    def execute(self): 
+    def execute(self,args):
         print("Executing TestCommand")
 
 def test_register_command():
