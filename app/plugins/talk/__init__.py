@@ -4,7 +4,7 @@ from app.commands import Command
 class TalkCommand(Command):
     """Talk Class"""
     def __init__(self):
-        """Initialize MenuCommand.""" 
+        """Initialize TalkCommand.""" 
 
     def execute(self, args):
         """ Execute Talk """
