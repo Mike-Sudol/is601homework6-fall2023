@@ -1,5 +1,6 @@
 """ Division Command Class """
 from decimal import Decimal, InvalidOperation
+import logging
 from app.commands import Command
 
 class DivideCommand(Command):
@@ -18,7 +19,8 @@ class DivideCommand(Command):
 
         if number2 == 0:
             raise ZeroDivisionError("Error: Division by zero is not allowed.")
-
+        
+        logging.info("Dividing %s / %s",number1,number2)
         result = number1 / number2
         print(f"The result of {number1} / {number2} is: {result}")
         return result

@@ -1,5 +1,6 @@
 """ Subtraction Command Class"""
 from decimal import Decimal, InvalidOperation
+import logging
 from app.commands import Command
 
 class SubtractionCommand(Command):
@@ -15,5 +16,7 @@ class SubtractionCommand(Command):
             number2 = Decimal(args[1])
         except InvalidOperation as exc:
             raise ValueError("Error: Invalid number format. Please enter valid decimal numbers.") from exc
+        logging.info("Subtracting %s - %s",number1,number2)
         result = number1 - number2
+        print(f"The result of {number1} - {number2} is: {result}")
         return result

@@ -1,4 +1,5 @@
 """Module containing command-related classes."""
+import logging
 from app.commands import Command
 
 class MenuCommand(Command):
@@ -11,7 +12,9 @@ class MenuCommand(Command):
 
     def execute(self, args):
         """Execute the menu command."""
+        logging.info("Menu Opened")
         print("Available commands:")
         for command_name in self.command_handler.commands.keys():
             print("-", command_name)
+        logging.info("Menu Closed")
         
